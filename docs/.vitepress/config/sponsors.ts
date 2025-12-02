@@ -1,6 +1,20 @@
-export const rightRichTextSponsors = []
+export type Sponsor = {
+  url: string
+  name_cn?: string
+  name: string
+  slogan_cn?: string
+  slogan: string
+  img: string
+  isDark?: boolean
+  imgL?: string
+  slogan_index?: string
+  banner_img?: string
+  className?: string
+}
 
-export const rightBigLogoSponsors = [
+export const rightRichTextSponsors: Sponsor[] = []
+
+export const rightBigLogoSponsors: Sponsor[] = [
   {
     name: 'CRMEB',
     img: '/images/CRMEB.png',
@@ -12,7 +26,7 @@ export const rightBigLogoSponsors = [
   },
 ]
 
-export const rightLogoSmallSponsors = [
+export const rightLogoSmallSponsors: Sponsor[] = [
   {
     name: 'BuildAdmin',
     img: '/images/buildadmin.png',
@@ -31,23 +45,7 @@ export const rightLogoSmallSponsors = [
   },
 ]
 
-export const leftCustomImgSponsors = [
-  {
-    name: '美乐',
-    img: '/images/mele.png',
-    url: 'https://melecode.com/',
-    slogan: 'Enterprise-level low-code development platform',
-    slogan_cn: '企业级全栈低代码开发平台',
-    banner_img: '/images/mele-banner.png',
-  },
-  {
-    name: 'VForm',
-    img: '/images/vform.png',
-    url: 'https://vform666.com/',
-    slogan: 'Vue 2/3 Visual/Low-Code Forms',
-    slogan_cn: 'Vue 2/3 可视化低代码表单',
-    banner_img: '/images/vform-banner.png',
-  },
+export const leftCustomImgSponsors: Sponsor[] = [
   {
     name: 'JNPF',
     img: '/images/jnpf_index.png',
@@ -65,6 +63,6 @@ export const platinumSponsors = [
   ...rightRichTextSponsors,
 ]
 
-export const leftLogoSponsors = []
+export const leftLogoSponsors: Sponsor[] = []
 
 export const goldSponsors = [...rightLogoSmallSponsors, ...leftLogoSponsors]
